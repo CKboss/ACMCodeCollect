@@ -16,3 +16,14 @@ BZOJ 4514: [Sdoi2016]数字配对
 BZOJ 4517: [Sdoi2016]排列计数
  
 错排数和组合数取模
+
+BZOJ 4518: [Sdoi2016]征途
+化简:
+$m^2* \frac{1}{m}\sum_{i=1}^m(x_i-\overline{x})$
+$m*\sum_{i=1}^{m}(x_i^2+2x_i\frac{L}{m}+\frac{L^2}{m})$
+$\sum_{i=1}^{m}(m*x_i^2-2x_iL+\frac{L^2}{m})$
+$m*\sum_{i=1}^{m}x_i^2-L^2$ 
+
+
+ 即要求每段的平方和最小: $dp[o][i] = dp[o-1][j] + len(j->i)^2$ 这个可以用斜率优化dp优化.
+ 
